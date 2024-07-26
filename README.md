@@ -12,7 +12,7 @@ This example illustrate the use of Command pattern to manage bank account transa
 * In WithdrawCommand, the execute method performs a withdrawal, and the unExecute method simulates a deposit of the same amount.
 
 
-# Exercíse
+# Exercise
 
  1. Update Command to be an abstract class, and add to it a Date field to save da current date of the execution of the command.
  2. Update DepositCommand and WithdrawCommand to extends from Command class.
