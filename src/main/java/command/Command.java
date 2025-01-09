@@ -1,4 +1,6 @@
 package command;
+import java.util.Date;
+import java.time.Instant;
 /**
  * Command interface that declares the methods for executing and undoing a command.
  */
@@ -6,16 +8,24 @@ package command;
 /**
  * author:patriciamacedo
  */
-public interface Command {
-    /**
-     * Execute the command.
-     */
+public abstract class Command {
+    private Date executionDate;
 
-    void execute();
+    public Command() {
+        this.executionDate = null;
+    }
 
-    /**
-     * Undo the command.
-     */
+    public void setExecutionDate(Date executionDate) {
+        this.executionDate = executionDate;
+    }
 
-    void unExecute();
+    public Date getExecutionDate() {
+        return executionDate;
+    }
+
+    // Métodos abstratos
+    public abstract void execute();
+    public abstract void unExecute();
+    public abstract String toString();
+
 }
